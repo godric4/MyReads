@@ -1,6 +1,8 @@
 # MyReads Project
 
-This is a ReactJS project made in compliance as final assessment project for Udacity's React Fundamentals course. The goal of this project is to allow students to demonstrate one's grasp on the use of React library based on the provided course by Udacity. 
+Demo: https://myreadspro.web.app
+
+This is a ReactJS project made in compliance as final assessment project for Udacity's React Fundamentals course. The goal of this project is to allow students to demonstrate one's grasp on the use of React library based on the provided course by Udacity.
 
 The main task of this React project are the following:
 
@@ -13,8 +15,8 @@ The main task of this React project are the following:
 
 To get started developing right away:
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+- install all project dependencies with `npm install`
+- start the development server with `npm start`
 
 ## What You're Getting
 
@@ -46,19 +48,18 @@ To get started developing right away:
     ├── routes # Views that are rendered based on the URL.
     │   ├── BookShelfsPage.js
     │   ├── SearchPage.js
-    │   
+    │
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
-
 
 ## Backend Server
 
 To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
+- [`getAll`](#getall)
+- [`update`](#update)
+- [`search`](#search)
 
 ### `getAll`
 
@@ -68,8 +69,8 @@ Method Signature:
 getAll()
 ```
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
+- Returns a Promise which resolves to a JSON object containing a collection of book objects.
+- This collection represents the books currently in the bookshelves in your app.
 
 ### `update`
 
@@ -79,9 +80,9 @@ Method Signature:
 update(book, shelf)
 ```
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+- book: `<Object>` containing at minimum an `id` attribute
+- shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]
+- Returns a Promise which resolves to a JSON object containing the response data of the POST request
 
 ### `search`
 
@@ -91,9 +92,10 @@ Method Signature:
 search(query)
 ```
 
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+- query: `<String>`
+- Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
+- These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ## Important
+
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
